@@ -84,3 +84,34 @@ git stash pop 0
 git reset --hard
 
 ```
+
+## Bundle 2.
+
+### Exercise 1
+
+```bash
+# create new branch
+git switch -C ft/bundle-2
+
+echo "" > services.html
+
+git push -u origin ft/bundle-2
+```
+
+### Exercise 2
+
+```bash
+git switch -C ft/service-redesign
+
+git add services.html
+
+git commit -m "Redesigning the service page"
+
+git switch main
+
+git add service.html
+
+git commit -m "Additional changes to the service page"
+
+git push
+```
