@@ -175,3 +175,20 @@ git add .
 git commit -m "Commit after rebasing from the main branch"
 git push
 ```
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+
+git remote add git-copy https://github.com/danielerat/gitExercisesClone.git
+	# git remote
+		# git-copy
+		# origin
+git add home.html
+git commit -m "Changes on the home page"
+
+git push origin
+git push git-copy
+```
