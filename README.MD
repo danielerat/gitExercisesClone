@@ -42,3 +42,45 @@ git switch dev
 git branch -d test
     # Output: Deleted branch test (was d80a34a).
 ```
+
+### Exercise 2
+
+```bash
+# Creating our home page
+echo "" > home.html
+
+# Stashing our home page
+git stash push -am "Home Page"
+
+
+# Creating our about page
+echo "" > about.html
+
+# Stashing our home About
+git stash push -am "About Page"
+
+# Creating our Team Page
+echo "" > team.html
+
+git stash push -am "Team Page"
+	# git stash list
+		# Output
+		# stash@{0}: On dev: Team Page
+		# stash@{1}: On dev: About Page
+		# stash@{2}: On dev: Home Page
+
+#stash pop the about page
+git stash pop 1
+# Stash pop the home page
+git stash pop 1
+
+# pushing the dev branch.
+git push -u origin dev
+
+# Poping the team page.
+git stash pop 0
+
+#removing the team page.
+git reset --hard
+
+```
