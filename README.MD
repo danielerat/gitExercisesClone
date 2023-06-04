@@ -115,3 +115,63 @@ git commit -m "Additional changes to the service page"
 
 git push
 ```
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+git switch -C ft/team-page
+
+echo "" > team.html
+
+git add .
+
+git push -u origin ft/team-page
+
+git switch main
+
+git switch -C ft/contact-page
+
+git switch ft/team-page
+
+git log --oneline --all --graph
+	#output
+	  #* cd56139 (HEAD -> ft/team-page, origin/ft/team-page) Addi..
+
+git switch ft/contact-page
+
+git add .
+
+git commit -m "Changes after picking cherries" #😂
+
+git push -u origin ft/contact-page
+
+# Faq Branch
+git switch -C ft/faq-page
+git add .
+git commit -m "Adding the faq page"
+git push -u origin ft/faq-page
+
+git revert cd56139
+
+git commit .
+git commit -m "Reverting from the ft/team commit"
+git push
+
+```
+
+### Exercise 2
+
+```bash
+git switch -C ft/home-page-redesign
+git add .
+git commit -m "Redesign the home page"
+git push
+
+git switch ft/home-page-redesign
+git rebase main
+git add .
+git commit -m "Commit after rebasing from the main branch"
+git push
+```
